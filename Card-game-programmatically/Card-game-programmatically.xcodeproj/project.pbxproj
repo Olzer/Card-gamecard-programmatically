@@ -14,6 +14,7 @@
 		183D70912929118400127633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183D708F2929118400127633 /* LaunchScreen.storyboard */; };
 		183D709B2929158500127633 /* CardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709A2929158500127633 /* CardSelectionViewController.swift */; };
 		183D709D2929176600127633 /* CardGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709C2929176600127633 /* CardGameButton.swift */; };
+		183D709F29292F1900127633 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709E29292F1900127633 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		183D70922929118400127633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183D709A2929158500127633 /* CardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionViewController.swift; sourceTree = "<group>"; };
 		183D709C2929176600127633 /* CardGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameButton.swift; sourceTree = "<group>"; };
+		183D709E29292F1900127633 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				183D70862929118300127633 /* SceneDelegate.swift */,
 				183D709C2929176600127633 /* CardGameButton.swift */,
 				183D709A2929158500127633 /* CardSelectionViewController.swift */,
+				183D709E29292F1900127633 /* RulesViewController.swift */,
 				183D708A2929118300127633 /* Main.storyboard */,
 				183D708D2929118400127633 /* Assets.xcassets */,
 				183D708F2929118400127633 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D709F29292F1900127633 /* RulesViewController.swift in Sources */,
 				183D70852929118300127633 /* AppDelegate.swift in Sources */,
 				183D70872929118300127633 /* SceneDelegate.swift in Sources */,
 				183D709B2929158500127633 /* CardSelectionViewController.swift in Sources */,

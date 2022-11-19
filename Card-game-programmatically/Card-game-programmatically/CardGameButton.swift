@@ -15,6 +15,7 @@ class CardGameButton: UIButton {
         super.init(frame: .zero)
         self.backgroundColor = backroundColor
         setTitle(title, for: .normal)
+        configure()
     }
     
     func configure() {
@@ -23,4 +24,5 @@ class CardGameButton: UIButton {
         setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
 }

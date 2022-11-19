@@ -15,6 +15,7 @@
 		183D709B2929158500127633 /* CardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709A2929158500127633 /* CardSelectionViewController.swift */; };
 		183D709D2929176600127633 /* CardGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709C2929176600127633 /* CardGameButton.swift */; };
 		183D709F29292F1900127633 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D709E29292F1900127633 /* RulesViewController.swift */; };
+		183D70A1292938D100127633 /* CardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D70A0292938D100127633 /* CardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		183D709A2929158500127633 /* CardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionViewController.swift; sourceTree = "<group>"; };
 		183D709C2929176600127633 /* CardGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameButton.swift; sourceTree = "<group>"; };
 		183D709E29292F1900127633 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		183D70A0292938D100127633 /* CardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				183D70842929118300127633 /* AppDelegate.swift */,
+				183D70A0292938D100127633 /* CardDeck.swift */,
 				183D70862929118300127633 /* SceneDelegate.swift */,
 				183D709C2929176600127633 /* CardGameButton.swift */,
 				183D709A2929158500127633 /* CardSelectionViewController.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D70A1292938D100127633 /* CardDeck.swift in Sources */,
 				183D709F29292F1900127633 /* RulesViewController.swift in Sources */,
 				183D70852929118300127633 /* AppDelegate.swift in Sources */,
 				183D70872929118300127633 /* SceneDelegate.swift in Sources */,

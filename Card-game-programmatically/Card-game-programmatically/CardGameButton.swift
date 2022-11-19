@@ -4,25 +4,25 @@ class CardGameButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backroundColor: UIColor, title: String) {
+    init(color: UIColor, title: String, systemImageName: String) {
         super.init(frame: .zero)
-        self.backgroundColor = backroundColor
-        setTitle(title, for: .normal)
-        configure()
-    }
+        
+        configuration                      = .borderedTinted()
+        configuration?.title               = title
+        configuration?.baseForegroundColor = color
+        configuration?.baseBackgroundColor = color
+        configuration?.cornerStyle         = .medium
+        
+        configuration?.image               = UIImage(systemName: systemImageName)
+        configuration?.imagePadding        = 5
+        configuration?.imagePlacement      = .leading
     
-    func configure() {
-        layer.cornerRadius = 10
-        titleLabel?.font = .systemFont(ofSize: 19, weight: .bold)
-        setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

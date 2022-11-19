@@ -3,15 +3,40 @@ import UIKit
 class CardSelectionViewController: UIViewController {
 
     let cardImageView = UIImageView()
-    let stopButton = CardGameButton(backroundColor: .systemRed, title: "Stop!")
-    let restartButton = CardGameButton(backroundColor: .systemGreen, title: "Restart")
-    let rulesButton = CardGameButton(backroundColor: .systemBlue, title: "Rules")
+    let stopButton    = CardGameButton(color: .systemRed, title: "Stop!", systemImageName: "stop.circle")
+    let restartButton = CardGameButton(color: .systemGreen, title: "Restart", systemImageName: "arrow.clockwise.circle")
+    let rulesButton   = CardGameButton(color: .systemBlue, title: "Rules", systemImageName: "list.bullet.clipboard")
     
+    var cards = CardDeck.allValues
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
+    }
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(randomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer() {
+        timer.invalidate()
+    }
+    
+    @objc func resetTimer() {
+        stopTimer()
+        startTimer()
+    }
+    
+    @objc func randomCard() {
+        cardImageView.image = cards.randomElement()
     }
     
     func configureUI() {
@@ -36,6 +61,7 @@ class CardSelectionViewController: UIViewController {
     
     func configureStopButton() {
         view.addSubview(stopButton)
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             stopButton.widthAnchor.constraint(equalToConstant: 260),
@@ -47,6 +73,7 @@ class CardSelectionViewController: UIViewController {
     
     func configureRestartButton() {
         view.addSubview(restartButton)
+        restartButton.addTarget(self, action: #selector(resetTimer), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             restartButton.widthAnchor.constraint(equalToConstant: 115),
